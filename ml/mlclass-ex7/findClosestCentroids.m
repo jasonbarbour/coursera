@@ -21,7 +21,20 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
-
+for i=1:size(X, 1)
+  min_cost = -1;
+  min_idx = -1;
+  for j=1:K
+    cost = sum((X(i,:) - centroids(j,:)).^2);
+    if min_cost == -1 || min_cost > cost
+      min_cost = cost;
+      min_idx = j;
+    endif
+  end
+  idx(i) = min_idx;
+end
+centroids;
+idx
 
 
 

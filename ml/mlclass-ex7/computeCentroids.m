@@ -25,9 +25,27 @@ centroids = zeros(K, n);
 %
 % Note: You can use a for-loop over the centroids to compute this.
 %
+%idx
 
+for i=1:K
+  centroids(i,:) = mean(X(idx==i,:));
+  % tmp = find(idx == i);
+  % count = size(tmp, 1);
+  %if i == 3
+  %  tmp
+  %endif
+  %for j=1:count
+  %  centroids(i,:) = centroids(i,:) + X(j,:);
+  %  if i == 3
+  %    X(j,:)
+  %    centroids(i,:)
+  %  endif
+  %end
+  %count
+  %centroids(i,:) = centroids(i,:) / count;
+end
 
-
+%centroids
 
 
 
